@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "SerpClix: A Closer Look at Earning Passive Income Through Simple Search Clicks"
+title: "[SerpClix:](https://serpclix.com/users/referrals/RTI8DPOEUEXZ43R2Z0M0VAU66) A Closer Look at Earning Passive Income Through Simple Search Clicks"
 date: 2026-01-01
 categories: [Side Hustle, Passive Income]
 tags: [earn online, serpclix]
