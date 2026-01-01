@@ -1,11 +1,16 @@
 title: My Blog
-description: A free blog built with GitHub Pages
+description: Tutorials, guides, and ideas
 author: Your Name
+
 theme: minima
-
-show_excerpts: true
-
 minima:
   skin: auto
-  social_links:
-    github: doctalevo-source
+
+show_excerpts: true
+paginate: 5
+paginate_path: "/page:num/"
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
