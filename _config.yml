@@ -8,4 +8,4 @@ show_excerpts: true
 minima:
   skin: auto
   social_links:
-    github: yourusername
+    github: doctalevo-source
