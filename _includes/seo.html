@@ -1,0 +1,16 @@
+{% assign description = page.excerpt | strip_html | truncate: 160 %}
+
+<meta name="description" content="{{ description }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+
+<!-- OpenGraph -->
+<meta property="og:title" content="{{ page.title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:site_name" content="{{ site.title }}">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ page.title }}">
+<meta name="twitter:description" content="{{ description }}">
