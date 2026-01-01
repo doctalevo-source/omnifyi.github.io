@@ -1,0 +1,11 @@
+title: My Blog
+description: A free blog built with GitHub Pages
+author: Your Name
+theme: minima
+
+show_excerpts: true
+
+minima:
+  skin: auto
+  social_links:
+    github: yourusername
