@@ -2,30 +2,41 @@
 layout: default
 ---
 {% assign current_lang = page.lang | default: site.default_lang %}
-{% assign translated = nil %}
+{% assign translation = nil %}
 
-{% if current_lang != site.default_lang %}
+{% if current_lang == site.default_lang %}
   {% for p in site.posts_hi %}
     {% if p.post_id == page.post_id %}
-      {% assign translated = p %}
+      {% assign translation = p %}
     {% endif %}
   {% endfor %}
+{% else %}
+  {% assign translation = page %}
 {% endif %}
 
 
 <article>
+
+  <!-- Language Switch -->
+  <div style="margin-bottom:15px;font-size:0.9rem;">
+    {% if current_lang == site.default_lang %}
+      <strong>English</strong>
+      {% if translation %}
+        | <a href="{{ translation.url }}">हिंदी</a>
+      {% else %}
+        | हिंदी (not available)
+      {% endif %}
+    {% else %}
+      <a href="{{ site.baseurl }}/">English</a> | <strong>हिंदी</strong>
+    {% endif %}
+  </div>
+
   <h1>{{ page.title }}</h1>
   <p><small>{{ page.date | date: "%B %d, %Y" }}</small></p>
-  {% if current_lang != site.default_lang and translated == nil %}
+
+  {% if current_lang != site.default_lang and translation == nil %}
     <p style="background:#fff3cd;padding:10px;border-radius:6px;">
       This post is currently available in English.
-    </p>
-  {% if page.categories %}
-    <p>
-      <strong>Categories:</strong>
-      {% for category in page.categories %}
-        {{ category }}
-      {% endfor %}
     </p>
   {% endif %}
 
