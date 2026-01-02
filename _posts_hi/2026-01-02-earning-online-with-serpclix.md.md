@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "SerpClix: सिंपल सर्च क्लिक्स के ज़रिए पैसिव इनकम कमाने पर एक नज़दीकी नज़र"
-date: 2026-01-01
+date: 2026-01-02
 post_id: serpclix-side-hustle
 lang: hi
 categories: [Side Hustle, Passive Income]
