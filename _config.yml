@@ -14,3 +14,5 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-paginate
+default_lang: en
+languages: ["en", "hi"]
