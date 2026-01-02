@@ -1,4 +1,6 @@
 {% assign description = page.excerpt | strip_html | truncate: 160 %}
+{% assign current_lang = page.lang | default: site.default_lang %}
+{% assign post_id = page.post_id %}
 
 <meta name="description" content="{{ description }}">
 <link rel="canonical" href="{{ page.url | absolute_url }}">
@@ -14,3 +16,19 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="{{ page.title }}">
 <meta name="twitter:description" content="{{ description }}">
+
+<!-- hreflang -->
+{% if post_id %}
+  <!-- English (default) -->
+  <link rel="alternate" hreflang="en" href="{{ site.url }}{{ page.url | remove_first: '/hi/' }}" />
+
+  <!-- Hindi (if exists) -->
+  {% for p in site.posts_hi %}
+    {% if p.post_id == post_id %}
+      <link rel="alternate" hreflang="hi" href="{{ site.url }}{{ p.url }}" />
+    {% endif %}
+  {% endfor %}
+
+  <!-- x-default -->
+  <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ page.url | remove_first: '/hi/' }}" />
+{% endif %}
